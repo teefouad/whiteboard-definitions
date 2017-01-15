@@ -1,0 +1,245 @@
+// ===========================================================================
+// DEFINITIONS
+// ===========================================================================
+
+// ------------------------
+// NAMESPACE
+// ------------------------
+
+$wb-namespace                       : 'wb' !default;
+$wb-prefix                          : if($wb-namespace, '#{$wb-namespace}-', '') !default;
+
+// ------------------------
+// PADDING & MARGIN
+// ------------------------
+
+// PADDING
+$wb-padding-base                    : 2rem !default;
+
+$wb-padding-small                   : 0.50 * $wb-padding-base !default;
+$wb-padding-smaller                 : 0.25 * $wb-padding-base !default;
+$wb-padding-smallest                : 0.12 * $wb-padding-base !default;
+
+$wb-padding-large                   : 2 * $wb-padding-base !default;
+$wb-padding-larger                  : 3 * $wb-padding-base !default;
+$wb-padding-largest                 : 4 * $wb-padding-base !default;
+
+// MARGIN
+$wb-margin-base                     : 2rem !default;
+
+$wb-margin-small                    : 0.50 * $wb-margin-base !default;
+$wb-margin-smaller                  : 0.25 * $wb-margin-base !default;
+$wb-margin-smallest                 : 0.12 * $wb-margin-base !default;
+
+$wb-margin-large                    : 2 * $wb-margin-base !default;
+$wb-margin-larger                   : 3 * $wb-margin-base !default;
+$wb-margin-largest                  : 4 * $wb-margin-base !default;
+
+// SPACING
+$wb-macro-space                     : $wb-margin-large !default;
+$wb-micro-space                     : $wb-margin-base !default;
+
+// ------------------------
+// TRANSITIONS
+// ------------------------
+
+$wb-transition-duration             : 175ms !default;
+$wb-transition                      : #{
+                                        opacity     $wb-transition-duration,
+                                        color       $wb-transition-duration,
+                                        border      $wb-transition-duration,
+                                        background  $wb-transition-duration
+                                      } !default;
+
+// EASING FUNCTIONS
+$wb-ease-in                         : cubic-bezier(0.550, 0.055, 0.675, 0.190) !default;
+$wb-ease-out                        : cubic-bezier(0.215, 0.610, 0.355, 1.000) !default;
+$wb-ease-in-out                     : cubic-bezier(0.645, 0.045, 0.355, 1.000) !default;
+
+$wb-ease-in-back                    : cubic-bezier(0.455, -0.365, 0.880, 0.680) !default;
+$wb-ease-out-back                   : cubic-bezier(0.200,  0.435, 0.635, 1.650) !default;
+$wb-ease-in-out-back                : cubic-bezier(0.680, -0.550, 0.265, 1.550) !default;
+
+$wb-ease-in-quad                    : cubic-bezier(0.550, 0.085, 0.680, 0.530) !default;
+$wb-ease-out-quad                   : cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;
+$wb-ease-in-out-quad                : cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
+
+$wb-ease-in-snap                    : cubic-bezier(0.790, 0.005, 0.855, 0.520) !default;
+$wb-ease-out-snap                   : cubic-bezier(0.130, 0.330, 0.305, 1.000) !default;
+$wb-ease-in-out-snap                : cubic-bezier(0.790, 0.005, 0.305, 1.000) !default;
+
+// ------------------------
+// FONTS
+// ------------------------
+
+$wb-font-family-sans-serif          : #{Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif} !default;
+$wb-font-family-serif               : #{Lora, Georgia, 'Times New Roman', serif} !default;
+$wb-font-family-monospace           : #{Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace} !default;
+
+$wb-font-family                     : $wb-font-family-sans-serif !default;
+$wb-font-size                       : 1.4rem !default;
+
+// ------------------------
+// COLORS
+// ------------------------
+
+// LIGHT & DARK
+$wb-color-light                     : #f6f6f6 !default;
+$wb-color-lighter                   : #fafafa !default;
+$wb-color-lightest                  : #fff !default;
+
+$wb-color-dark                      : #222 !default;
+$wb-color-darker                    : #111 !default;
+$wb-color-darkest                   : #000 !default;
+
+// GRAY
+$wb-color-gray                      : #c0c0c0 !default;
+
+$wb-color-gray-light                : #d0d0d0 !default;
+$wb-color-gray-lighter              : #e6e6e6 !default;
+$wb-color-gray-lightest             : #f0f0f0 !default;
+
+$wb-color-gray-dark                 : #999 !default;
+$wb-color-gray-darker               : #666 !default;
+$wb-color-gray-darkest              : #333 !default;
+
+// SUCCESS
+$wb-color-success                   : #52c452 !default;
+
+$wb-color-success-light             : lighten($wb-color-success, 13%) !default;
+$wb-color-success-lighter           : lighten($wb-color-success, 26%) !default;
+$wb-color-success-lightest          : lighten($wb-color-success, 40%) !default;
+
+$wb-color-success-dark              : darken($wb-color-success, 13%) !default;
+$wb-color-success-darker            : darken($wb-color-success, 26%) !default;
+$wb-color-success-darkest           : darken($wb-color-success, 40%) !default;
+
+$wb-color-success-text              : #060 !default;
+$wb-color-success-border            : #9ad981 !default;
+$wb-color-success-background        : #e8ffe7 !default;
+
+// DANGER
+$wb-color-danger                    : #ff5e59 !default;
+
+$wb-color-danger-light              : lighten($wb-color-danger, 13%) !default;
+$wb-color-danger-lighter            : lighten($wb-color-danger, 26%) !default;
+$wb-color-danger-lightest           : lighten($wb-color-danger, 40%) !default;
+
+$wb-color-danger-dark               : darken($wb-color-danger, 13%) !default;
+$wb-color-danger-darker             : darken($wb-color-danger, 26%) !default;
+$wb-color-danger-darkest            : darken($wb-color-danger, 40%) !default;
+
+$wb-color-danger-text               : #bc0000 !default;
+$wb-color-danger-border             : #ff9487 !default;
+$wb-color-danger-background         : #ffe8e7 !default;
+
+// WARNING
+$wb-color-warning                   : #f0ad4e !default;
+
+$wb-color-warning-light             : lighten($wb-color-warning, 13%) !default;
+$wb-color-warning-lighter           : lighten($wb-color-warning, 26%) !default;
+$wb-color-warning-lightest          : lighten($wb-color-warning, 40%) !default;
+
+$wb-color-warning-dark              : darken($wb-color-warning, 13%) !default;
+$wb-color-warning-darker            : darken($wb-color-warning, 26%) !default;
+$wb-color-warning-darkest           : darken($wb-color-warning, 40%) !default;
+
+$wb-color-warning-text              : #d46800 !default;
+$wb-color-warning-border            : #ffb441 !default;
+$wb-color-warning-background        : #fff4c6 !default;
+
+// INFO
+$wb-color-info                      : #45b2d3 !default;
+
+$wb-color-info-light                : lighten($wb-color-info, 13%) !default;
+$wb-color-info-lighter              : lighten($wb-color-info, 26%) !default;
+$wb-color-info-lightest             : lighten($wb-color-info, 40%) !default;
+
+$wb-color-info-dark                 : darken($wb-color-info, 13%) !default;
+$wb-color-info-darker               : darken($wb-color-info, 26%) !default;
+$wb-color-info-darkest              : darken($wb-color-info, 40%) !default;
+
+$wb-color-info-text                 : #666 !default;
+$wb-color-info-border               : #adc9e7 !default;
+$wb-color-info-background           : #e2f1ff !default;
+
+// SOCIAL
+$wb-color-facebook                  : #4b6ea8 !default;
+$wb-color-twitter                   : #4fd5f8 !default;
+$wb-color-gplus                     : #da2200 !default;
+$wb-color-vimeo                     : #96d3f0 !default;
+$wb-color-youtube                   : #da1818 !default;
+$wb-color-flickr                    : #84979e !default;
+$wb-color-dribbble                  : #f2689c !default;
+$wb-color-pinterest                 : #cb2027 !default;
+$wb-color-linkedin                  : #0189c3 !default;
+$wb-color-instagram                 : #e1d4b8 !default;
+$wb-color-tumblr                    : #345365 !default;
+$wb-color-apple                     : #1b1b1b !default;
+$wb-color-android                   : #99cc00 !default;
+$wb-color-blackberry                : #000000 !default;
+
+// THEMES
+$wb-color-vintage-blue              : #1d242c !default;
+$wb-color-dark-blue                 : #002f4b !default;
+$wb-color-calm-blue                 : #292484 !default;
+$wb-color-blue                      : #5d9cec !default;
+$wb-color-aqua                      : #4fc1e9 !default;
+$wb-color-lavender                  : #ac92ec !default;
+$wb-color-purple                    : #942373 !default;
+$wb-color-pink-rose                 : #ec87c0 !default;
+$wb-color-grapefruit                : #ed5565 !default;
+$wb-color-dark-green                : #417711 !default;
+$wb-color-green                     : #00a13f !default;
+$wb-color-grass                     : #a0d468 !default;
+$wb-color-olive-green               : #1abc9c !default;
+$wb-color-mint                      : #48cfad !default;
+$wb-color-light-mint                : #5affd6 !default;
+$wb-color-red                       : #cf111c !default;
+$wb-color-sweet-red                 : #ef4135 !default;
+$wb-color-bittersweet               : #fc6e51 !default;
+$wb-color-sunflower                 : #ffce54 !default;
+$wb-color-orange                    : #ff6800 !default;
+$wb-color-mandarin                  : #dc4225 !default;
+$wb-color-truestory                 : #55bbcc !default;
+$wb-color-simplex                   : #22aaee !default;
+
+// GRADIENTS
+$wb-color-gradient-1                : linear-gradient(135deg, $wb-color-blue          , $wb-color-light-mint);
+$wb-color-gradient-2                : linear-gradient(135deg, $wb-color-sweet-red     , $wb-color-sunflower);
+$wb-color-gradient-3                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-lavender);
+$wb-color-gradient-4                : linear-gradient(135deg, $wb-color-sweet-red     , $wb-color-lavender);
+$wb-color-gradient-5                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-light-mint);
+$wb-color-gradient-6                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-sunflower);
+$wb-color-gradient-7                : linear-gradient(135deg, $wb-color-blue          , $wb-color-sweet-red);
+$wb-color-gradient-8                : linear-gradient(135deg, $wb-color-blue          , $wb-color-grapefruit);
+$wb-color-gradient-9                : linear-gradient(135deg, $wb-color-light-mint    , $wb-color-sunflower);
+$wb-color-gradient-10               : linear-gradient(135deg, $wb-color-light-mint    , $wb-color-lavender);
+$wb-color-gradient-11               : linear-gradient(135deg, $wb-color-sunflower     , $wb-color-lavender);
+$wb-color-gradient-12               : linear-gradient(135deg, $wb-color-sunflower     , $wb-color-pink-rose);
+$wb-color-gradient-13               : linear-gradient(135deg, $wb-color-dark-blue     , $wb-color-dark-green);
+$wb-color-gradient-14               : linear-gradient(135deg, $wb-color-calm-blue     , $wb-color-mandarin);
+
+// SKIN
+$wb-color-primary                   : $wb-color-olive-green !default;
+$wb-color-primary-light             : lighten($wb-color-primary, 10%) !default;
+$wb-color-primary-dark              : darken($wb-color-primary, 10%) !default;
+
+$wb-color-secondary                 : $wb-color-vintage-blue !default;
+$wb-color-secondary-light           : lighten($wb-color-secondary, 10%) !default;
+$wb-color-secondary-dark            : darken($wb-color-secondary, 10%) !default;
+
+// ------------------------
+// BORDER
+// ------------------------
+
+$wb-border-size                     : 1px !default;
+$wb-border-style                    : solid !default;
+$wb-border-color                    : $wb-color-gray-lighter !default;
+
+$wb-border                          : $wb-border-size $wb-border-style $wb-border-color !default;
+
+$wb-border-radius-round             : 5px !default;
+$wb-border-radius-rounder           : 10px !default;
+$wb-border-radius-roundest          : 15px !default;
+$wb-border-radius-circle            : 9999px !default;
