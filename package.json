@@ -1,6 +1,6 @@
 {
   "name": "whiteboard-definitions",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "Essential definitions for Whiteboard",
   "main": "index.js",
   "scripts": {

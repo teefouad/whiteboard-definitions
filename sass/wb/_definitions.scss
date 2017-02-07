@@ -14,7 +14,7 @@ $wb-prefix                          : if($wb-namespace, '#{$wb-namespace}-', '')
 // ------------------------
 
 // PADDING
-$wb-padding-base                    : 2rem !default;
+$wb-padding-base                    : 20px !default;
 
 $wb-padding-small                   : 0.50 * $wb-padding-base !default;
 $wb-padding-smaller                 : 0.25 * $wb-padding-base !default;
@@ -25,7 +25,7 @@ $wb-padding-larger                  : 3 * $wb-padding-base !default;
 $wb-padding-largest                 : 4 * $wb-padding-base !default;
 
 // MARGIN
-$wb-margin-base                     : 2rem !default;
+$wb-margin-base                     : 20px !default;
 
 $wb-margin-small                    : 0.50 * $wb-margin-base !default;
 $wb-margin-smaller                  : 0.25 * $wb-margin-base !default;
@@ -64,6 +64,10 @@ $wb-ease-in-quad                    : cubic-bezier(0.550, 0.085, 0.680, 0.530) !
 $wb-ease-out-quad                   : cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;
 $wb-ease-in-out-quad                : cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
 
+$wb-ease-in-cubic                   : cubic-bezier(0.550, 0.055, 0.675, 0.190) !default;
+$wb-ease-out-cubic                  : cubic-bezier(0.215, 0.610, 0.355, 1.000) !default;
+$wb-ease-in-out-cubic               : cubic-bezier(0.645, 0.045, 0.355, 1.000) !default;
+
 $wb-ease-in-snap                    : cubic-bezier(0.790, 0.005, 0.855, 0.520) !default;
 $wb-ease-out-snap                   : cubic-bezier(0.130, 0.330, 0.305, 1.000) !default;
 $wb-ease-in-out-snap                : cubic-bezier(0.790, 0.005, 0.305, 1.000) !default;
@@ -77,7 +81,7 @@ $wb-font-family-serif               : #{Lora, Georgia, 'Times New Roman', serif}
 $wb-font-family-monospace           : #{Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace} !default;
 
 $wb-font-family                     : $wb-font-family-sans-serif !default;
-$wb-font-size                       : 1.4rem !default;
+$wb-font-size                       : 16px !default;
 
 // ------------------------
 // COLORS
@@ -184,41 +188,30 @@ $wb-color-vintage-blue              : #1d242c !default;
 $wb-color-dark-blue                 : #002f4b !default;
 $wb-color-calm-blue                 : #292484 !default;
 $wb-color-blue                      : #5d9cec !default;
+$wb-color-blue-ribbon               : #0769ed !default;
 $wb-color-aqua                      : #4fc1e9 !default;
 $wb-color-lavender                  : #ac92ec !default;
+$wb-color-medium-purple             : #aa4ade !default;
 $wb-color-purple                    : #942373 !default;
 $wb-color-pink-rose                 : #ec87c0 !default;
 $wb-color-grapefruit                : #ed5565 !default;
 $wb-color-dark-green                : #417711 !default;
 $wb-color-green                     : #00a13f !default;
 $wb-color-grass                     : #a0d468 !default;
+$wb-color-malachite                 : #0df75a !default;
 $wb-color-olive-green               : #1abc9c !default;
 $wb-color-mint                      : #48cfad !default;
 $wb-color-light-mint                : #5affd6 !default;
 $wb-color-red                       : #cf111c !default;
 $wb-color-sweet-red                 : #ef4135 !default;
+$wb-color-fuchsia                   : #ff3399 !default;
 $wb-color-bittersweet               : #fc6e51 !default;
 $wb-color-sunflower                 : #ffce54 !default;
 $wb-color-orange                    : #ff6800 !default;
+$wb-color-deep-saffron              : #ff9933 !default;
 $wb-color-mandarin                  : #dc4225 !default;
 $wb-color-truestory                 : #55bbcc !default;
 $wb-color-simplex                   : #22aaee !default;
-
-// GRADIENTS
-$wb-color-gradient-1                : linear-gradient(135deg, $wb-color-blue          , $wb-color-light-mint);
-$wb-color-gradient-2                : linear-gradient(135deg, $wb-color-sweet-red     , $wb-color-sunflower);
-$wb-color-gradient-3                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-lavender);
-$wb-color-gradient-4                : linear-gradient(135deg, $wb-color-sweet-red     , $wb-color-lavender);
-$wb-color-gradient-5                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-light-mint);
-$wb-color-gradient-6                : linear-gradient(135deg, $wb-color-grapefruit    , $wb-color-sunflower);
-$wb-color-gradient-7                : linear-gradient(135deg, $wb-color-blue          , $wb-color-sweet-red);
-$wb-color-gradient-8                : linear-gradient(135deg, $wb-color-blue          , $wb-color-grapefruit);
-$wb-color-gradient-9                : linear-gradient(135deg, $wb-color-light-mint    , $wb-color-sunflower);
-$wb-color-gradient-10               : linear-gradient(135deg, $wb-color-light-mint    , $wb-color-lavender);
-$wb-color-gradient-11               : linear-gradient(135deg, $wb-color-sunflower     , $wb-color-lavender);
-$wb-color-gradient-12               : linear-gradient(135deg, $wb-color-sunflower     , $wb-color-pink-rose);
-$wb-color-gradient-13               : linear-gradient(135deg, $wb-color-dark-blue     , $wb-color-dark-green);
-$wb-color-gradient-14               : linear-gradient(135deg, $wb-color-calm-blue     , $wb-color-mandarin);
 
 // SKIN
 $wb-color-primary                   : $wb-color-olive-green !default;
